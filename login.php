@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if inputs are empty
     if (empty($username) || empty($password)) {
-        echo "<script>alert('Please enter both username and password'); window.location.href='login.html';</script>";
+        echo "<script>alert('Please enter both username and password'); window.location.href='index.html';</script>";
         exit();
     }
 
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // If form not submitted via POST
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 ?>
