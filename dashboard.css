@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('img.jpg') no-repeat center center/cover;
+}
+
+.wrapper {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  color: #fff;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.wrapper h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.wrapper h1 span {
+  color: #ffd700;
+}
+
+.subtext {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* 🎁 Surprise Box Styles */
+.surprise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-box {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(145deg, #ff7043, #ff8a65);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.gift-box:hover {
+  transform: scale(1.05);
+}
+
+.lid {
+  position: absolute;
+  top: 0;
+  width: 130px;
+  height: 40px;
+  background: #f4511e;
+  border-radius: 10px 10px 0 0;
+  transform-origin: bottom;
+  transition: transform 1s ease;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 130px;
+  background: gold;
+  border-radius: 3px;
+}
+
+.box-body {
+  padding: 50px 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gift-box.open .lid {
+  transform: rotateX(140deg);
+}
+
+.gift-box.open {
+  transform: translateY(-10px);
+}
+
+/* ✨ Surprise Message */
+.surprise-message {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.surprise-message.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.surprise-message h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.surprise-message p {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.logout-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #f4511e;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ffd180;
+}
