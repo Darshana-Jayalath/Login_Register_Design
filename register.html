@@ -18,7 +18,7 @@
 
   <body>
     <div class="wrapper">
-      <form action="register.php" method="POST">
+      <form action="register.php" method="POST" autocomplete="off">
         
         <h1>Register</h1>
 
@@ -46,12 +46,17 @@
           <i class="bx bx-lock-alt"></i>
         </div>
 
+        <!-- Terms & Conditions -->
         <div class="remember-forgot">
-          <label><input type="checkbox" required /> I agree to the Terms & Conditions</label>
+          <label>
+            <input type="checkbox" name="terms" required /> I agree to the Terms & Conditions
+          </label>
         </div>
 
+        <!-- Submit Button -->
         <button type="submit" class="btn">Register</button>
 
+        <!-- Link to Login -->
         <div class="register-link">
           <p>Already have an account? <a href="index.html">Login</a></p>
         </div>

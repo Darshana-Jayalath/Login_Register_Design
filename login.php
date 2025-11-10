@@ -22,18 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify password
         if (password_verify($password, $user['password'])) {
-            // ✅ Store username in session
+            // Store username in session
             $_SESSION['username'] = $user['username'];
             header("Location: dashboard.php");
             exit();
         } else {
-            echo "<script>alert('Incorrect Password'); window.location.href='login.html';</script>";
+            echo "<script>alert('Incorrect password'); window.location.href='index.html';</script>";
+            exit();
         }
     } else {
-        echo "<script>alert('User not found'); window.location.href='login.html';</script>";
+        echo "<script>alert('User not found'); window.location.href='index.html';</script>";
+        exit();
     }
 } else {
-    // If form not submitted via POST
+    // If form not submitted via POST, redirect to login page
     header("Location: index.html");
     exit();
 }
